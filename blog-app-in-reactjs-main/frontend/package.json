@@ -20,12 +20,13 @@
     "redux-persist": "^6.0.0",
     "web-vitals": "^1.1.2"
   },
+  
   "scripts": {
-    "start": "craco start",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && craco start",
     "start-server": "npx json-server --watch data/db.json --port=3001",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "craco build",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
